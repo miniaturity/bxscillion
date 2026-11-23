@@ -4,7 +4,7 @@
 	"private": true,
 	"type": "module",
 	"imports": {
-		"#lib": "./src/lib/index.js",
+		"#lib": "./src/lib/index.ts",
 		"#lib/*": "./src/lib/*"
 	},
 	"scripts": {
@@ -23,5 +23,8 @@
 		"svelte-check": "^4.7.8",
 		"typescript": "^6.0.3",
 		"vite": "^8.3.8"
+	},
+	"dependencies": {
+		"fuse.js": "^7.5.0"
 	}
 }

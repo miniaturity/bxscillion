@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { IClassCard } from "#lib/data.ts";
+    import type { IClassCard } from "../../data.ts";
 
     let { title, subtitle, teacher, icon }: IClassCard = $props();
 </script>

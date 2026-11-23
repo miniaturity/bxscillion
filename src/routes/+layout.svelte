@@ -1,6 +1,7 @@
 <script lang="ts">
 	import favicon from '#lib/assets/favicon.svg';
     import Header from '#lib/components/Header.svelte';
+    import Sidebar from '#lib/components/Sidebar.svelte';
 	import type { LayoutProps } from './$types';
 
 	let { children }: LayoutProps = $props();
@@ -10,14 +11,22 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<Header />
+<div class="layout">
+	<Header />
 
-{@render children()}
-
+	<div class="below-header">
+		{@render children()}
+	</div>
+</div>
 <style lang="scss">
 	:global(*) {
 		box-sizing: border-box;
 
+	}
+
+	.layout {
+		display: flex;
+		flex-direction: column;
 	}
 
 	:root {

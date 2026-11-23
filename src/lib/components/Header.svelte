@@ -6,16 +6,21 @@
 
         <a href="/" class="header-link">
             <img src="/images/footer_logo.png" alt="" class="header-logo"/>
-            <span class="hl-text _link">Bronx Science Krillion</span>
+            <span class="hl-text _link">Bxscillion</span>
         </a> 
     </div>
 
     <div class="center">
-
+        
     </div>
 
     <div class="right">
-
+        <div class="h-apps">
+            Apps
+        </div>
+        <div class="h-pfp">
+            <img alt="" class="header-pfp" src="/images/default_pfp.jpg"/>
+        </div>
     </div>
 </header>
 
@@ -25,6 +30,62 @@
         flex-direction: row;
         align-items: center;
         height: 4rem;
+    }
+
+    .h-pfp {
+        height: 40px; width: 40px;
+        padding: 4px;
+
+        position: relative;
+        display: flex;
+        align-items: center; justify-content: center;
+
+        &:hover {
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0; left: 0;
+                width: 100%; height: 100%;
+                border-radius: 100%;
+                background-color: var(--us-hover);
+                opacity: 0.05;
+                transition: opacity 0.04s ease-in-out;
+            }
+        }
+    }
+
+    .header-pfp {
+        border-radius: 50%;
+        object-fit: cover;
+        width: 100%; height: 100%;
+    }
+
+    .h-apps {
+        font-family: "GoogleSymbols";
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        width: 40px; height: 40px;
+        font-size: 1.5rem;
+
+        position: relative;
+        display: flex;
+        align-items: center; justify-content: center;
+
+        &:hover {
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0; left: 0;
+                width: 100%; height: 100%;
+                border-radius: 100%;
+                background-color: var(--us-hover);
+                opacity: 0.05;
+                transition: opacity 0.04s ease-in-out;
+            }
+        }
     }
 
     .header-link {
@@ -71,6 +132,14 @@
     .center {
         margin: 0 1rem;
         width: auto;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        padding-right: 1.5rem;
     }
     
 

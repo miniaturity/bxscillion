@@ -43,7 +43,7 @@
 		
 		gap: 1.5rem;
 
-		border-radius: var(--std-br);
+		border-radius: 1.75rem;
 		padding: 0.5rem;
 	}
 
@@ -81,6 +81,8 @@
 		font-family: "GoogleSymbols";
 		font-weight: bold;
 		margin-bottom: 2px;
+
+		
 	}
 
 	.add-text {
@@ -115,7 +117,7 @@
 		
 		padding: 0.5rem 1.5rem 1.5rem 1.5rem;
 
-		border-radius: var(--std-br);
+		border-radius: 1.75rem;
 		gap: 1.5rem;
 		background-color: var(--outset-bg);
 	}
