@@ -28,16 +28,18 @@
 <style lang="scss">
 	main {
 		padding: 0 .5rem;
-		max-width: 1280px;
+		width: 100%; height: 100%;
 
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		margin-top: 1.5rem; 
 	}
 
 	section {
 		display: flex;
 		flex-direction: column;
+		max-width: 1280px;
 	
 		width: 100%;
 		

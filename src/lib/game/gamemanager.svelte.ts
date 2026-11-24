@@ -1,5 +1,5 @@
 import { RARITY_VALUES } from "#lib/data.js";
-import { GameState, type Answer, type Question, type QuestionSet, type SubmissionOut } from "./types";
+import { type GameState, type Answer, type Question, type QuestionSet, type SubmissionOut } from "./types";
 import Fuse, { type IFuseOptions } from "fuse.js";
 
 export class GameManager {

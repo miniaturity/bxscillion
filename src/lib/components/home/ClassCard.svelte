@@ -1,15 +1,15 @@
 <script lang="ts">
-    import type { IClassCard } from "../../data.ts";
+    import type { IClassCard } from "#lib/data.ts";
 
-    let { title, subtitle, teacher, icon }: IClassCard = $props();
+    let { id, title, subtitle, teacher, icon }: IClassCard = $props();
 </script>
 
 <div class="class-card">
     <div class="header">
         <div class="h-content">
-            <div class="_c_title hc-title">
+            <a class="hc-title" href={`/set/${id}`}>
                 {title}
-            </div>
+            </a>
             <div class="_c_subtitle hc-subtitle">
                 {subtitle}
             </div>
@@ -122,6 +122,27 @@
         gap: .25rem;
 
         color: #fff;
+    }
+
+    .hc-title {
+        color: #fff;
+        
+        font-size: 1.5rem;
+		font-weight: 400;
+		line-height: 2rem;
+
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+        text-decoration: none;
+
+        &:hover {
+			text-decoration: underline;
+			transition: all 0.03 ease-in-out;
+
+			text-decoration-thickness: 2px;    
+						
+		}
     }
 
     

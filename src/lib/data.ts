@@ -1,6 +1,7 @@
-import { Rarity } from "./game/types";
+import type { Rarity } from "./game/types";
 
 export interface IClassCard {
+    id: string;
     title: string;
     subtitle: string;
     teacher?: string;
@@ -16,6 +17,7 @@ export const RARITY_VALUES: Record<Rarity, number> = {
 }
 
 export const ExampleClass: IClassCard = {
+    id: "1",
     title: "Question Set 1",
     subtitle: "Bronx Science Krillion",
     teacher: "Rayhan Alwi",

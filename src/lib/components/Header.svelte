@@ -16,6 +16,9 @@
 
     <div class="right">
         <div class="h-apps">
+            add
+        </div>
+        <div class="h-apps">
             Apps
         </div>
         <div class="h-pfp">
@@ -30,6 +33,11 @@
         flex-direction: row;
         align-items: center;
         height: 4rem;
+
+        position: sticky;
+        top: 0;
+        background-color: var(--page-bg);
+        z-index: 99;
     }
 
     .h-pfp {
@@ -39,6 +47,7 @@
         position: relative;
         display: flex;
         align-items: center; justify-content: center;
+        cursor: pointer;
 
         &:hover {
             &::before {
@@ -140,6 +149,7 @@
         align-items: center;
 
         padding-right: 1.5rem;
+        gap: .5rem;
     }
     
 

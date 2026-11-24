@@ -14,8 +14,12 @@
 <div class="layout">
 	<Header />
 
-	<div class="below-header">
-		{@render children()}
+	<div class="main-layout">
+		<Sidebar open={false} />
+
+		<div class="layout-main-content">
+			{@render children()}
+		</div>
 	</div>
 </div>
 <style lang="scss">
@@ -27,6 +31,15 @@
 	.layout {
 		display: flex;
 		flex-direction: column;
+	}
+
+	.main-layout {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.layout-main-content {
+		flex-grow: 1;
 	}
 
 	:root {
@@ -45,6 +58,8 @@
 
 		--link-color: rgb(11, 87, 208);
 		--link-hover: #0b57d0;
+		--light-link-hover: rgb(194, 231, 255);
+		--link-fill: #004a77;
 	}
 
 	:global(body) {
@@ -85,16 +100,17 @@
 	}
 
 	:global(._link) {
+		text-decoration: none;
+
 		&:hover {
 			text-decoration: underline;
 			transition: all 0.03 ease-in-out;
 			line-height: 1.4rem;
 
-			text-decoration: underline;
 			text-decoration-thickness: 2px;      
 			text-underline-offset: 4px; 
 			text-decoration-skip-ink: none; 
-
+			
 		}
 	}
 
