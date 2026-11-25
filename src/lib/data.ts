@@ -9,9 +9,9 @@ export interface IClassCard {
 }
 
 export const RARITY_VALUES: Record<Rarity, number> = {
-    krillion: 15,
-    deepcut: 10,
-    rare: 6,
+    krillion: 25,
+    deepcut: 15,
+    rare: 8,
     schooler: 4,
     surface: 2
 }

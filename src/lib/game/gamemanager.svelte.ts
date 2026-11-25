@@ -4,6 +4,9 @@ import Fuse, { type IFuseOptions } from "fuse.js";
 
 export class GameManager {
 
+    public static readonly TIME_S = 25;
+    public static readonly SCORE_MULT = 10;
+
     public score = $state<number>(0);
     public questionSet = $state<QuestionSet>();
     public questionIndex = $state<number>(0);
@@ -11,13 +14,17 @@ export class GameManager {
     public finalAnswer = $state<Answer>();
     public input = $state<string>("");
     public lastInput = $state<{ answer: string, score: number }>();
-    public state = $state<GameState>("waiting");
+    public state = $state<GameState>("start");
+    public timer = $state<number>(GameManager.TIME_S);
+
     
     public static readonly F_THRESHOLD = 0.25;
 
     constructor(qs: QuestionSet) {
         this.questionSet = qs;
     }
+
+
     
     trySubmit(): SubmissionOut {
         if (!this.question) return { status: "bad", message: "Question undefined", caption: "if you aren't debugging, report this, please!" };

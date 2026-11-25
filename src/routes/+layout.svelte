@@ -31,15 +31,22 @@
 	.layout {
 		display: flex;
 		flex-direction: column;
+		height: 100dvh;
 	}
 
 	.main-layout {
 		display: flex;
 		flex-direction: row;
+		flex: 1;
+		min-height: 0;
 	}
 
 	.layout-main-content {
-		flex-grow: 1;
+		flex: 1;
+		min-width: 0;
+		min-height: 0;
+		display: flex; 
+		flex-direction: column;
 	}
 
 	:root {
@@ -58,13 +65,17 @@
 
 		--link-color: rgb(11, 87, 208);
 		--link-hover: #0b57d0;
+		--link-hover-2: #0b57d0;
 		--light-link-hover: rgb(194, 231, 255);
 		--link-fill: #004a77;
+
+		--icon-bc: #747775;
 	}
 
 	:global(body) {
 		background-color: var(--page-bg);
 		margin: 0;
+		overflow: hidden;
 	}
 
 	:global(._c_title) {

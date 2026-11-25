@@ -29,5 +29,5 @@ export interface SubmissionOut {
     score?: number;
 }
 
-export type GameState = "answering" | "waiting" | "done"
+export type GameState = "answering" | "waiting" | "done" | "start"
 

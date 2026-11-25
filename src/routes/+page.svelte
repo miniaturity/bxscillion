@@ -6,6 +6,26 @@
 
 <div class="page">
 	<main>
+		<section id="due-soon">
+			<div class="s-wrapper">
+				<header class="s-header">
+					<div class="s-title">Due Soon</div>
+					<div class="s-buttons">
+						<div class="add-class">
+							<span class="add add-text">View To-do</span>
+						</div>
+
+						<div class="collapse-content">
+							<span class="symbol">collapse_content</span>
+						</div>
+					</div>
+				</header>	
+
+				<div class="sc-content">
+					<span class="sc-text">You don't have any work due in the next 7 days.</span>
+				</div>
+			</div>
+		</section>
 		<section id="classes">
 			<div class="s-wrapper">
 				<header class="s-header">
@@ -34,6 +54,7 @@
 		flex-direction: column;
 		align-items: center;
 		margin-top: 1.5rem; 
+		gap: 1rem;	
 	}
 
 	section {
@@ -47,6 +68,31 @@
 
 		border-radius: 1.75rem;
 		padding: 0.5rem;
+	}
+
+	.collapse-content {
+		padding: 8px;
+		width: 40px; height: 40px;
+		position: relative;
+		cursor: pointer;
+		&:hover {
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0; left: 0;
+				width: 100%; height: 100%;
+				border-radius: 100%;
+				background-color: var(--us-hover);
+				opacity: 0.05;
+				transition: opacity 0.04s ease-in-out;
+			}
+		}
+	}
+
+	.sc-content {
+		display: flex;
+		align-items: center; justify-content: center;
+		font-family: "GoogleSans";
 	}
 
 	.add-class {
@@ -104,6 +150,8 @@
 	.s-buttons {
 		display: flex;
 		flex-direction: row;
+		align-items: center;
+		gap: 1rem;
 	}
 
 	.s-title {

@@ -30,6 +30,20 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+
+        transition: background-color 0.05s ease-in-out;
+        cursor: pointer;
+
+        border-bottom: 1px solid var(--std-bc);
+
+        &:hover {
+            background-color: rgba(from var(--us-hover) r g b / 0.075);
+            border-top-left-radius: var(--std-br);
+            border-top-right-radius: var(--std-br);
+        }
     }
 
     .r-collapse {

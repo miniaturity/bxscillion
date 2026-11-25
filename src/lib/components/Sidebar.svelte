@@ -94,7 +94,17 @@
                 background-color: var(--light-link-hover);
                 border-radius: calc(48px * 0.75);
                 z-index: -1;
+
+                transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                will-change: transform;
             }
+
+            &:hover::before {
+                transform-origin: center;
+                transform: scaleY(calc((52 / (48 * 0.75))));
+                border-radius: 100%;
+            }
+           
         }
 
         &:not(.selected):hover {
